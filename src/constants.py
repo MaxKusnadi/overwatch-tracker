@@ -32,7 +32,7 @@ HEROES = {
     "Mercy": "mercy",
     "Tracer": "tracer",
     "D.VA": "dva",
-    "Widowmaker": "windowmaker",
+    "Widowmaker": "widowmaker",
     "McCree": "mccree",
     "Soldier:76": "soldier76",
     "Reinhardt": "reinhardt",
