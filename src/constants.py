@@ -9,7 +9,8 @@ PLAYERS = {
     "Stikman": "StikMan-11838",
     "SW1039": "sw1039-1426",
     "Seagull": "Seagull",
-    "TitaniumBro": "titaniumBro-1595"
+    "TitaniumBro": "titaniumBro-1595",
+    "Blindtrek": "BlindTrek-1514"
 }
 
 HEROES = {
