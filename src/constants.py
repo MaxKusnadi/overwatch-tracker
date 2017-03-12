@@ -8,7 +8,7 @@ PLAYERS = {
     "Sanctumsacre": "Sanctumsacre-1927",
     "Stikman": "StikMan-11838",
     "SW1039": "sw1039-1426",
-    "TitaniumBro": "titaniumBro#1595"
+    "TitaniumBro": "titaniumBro-1595"
 }
 
 HEROES = {
