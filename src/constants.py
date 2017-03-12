@@ -1,13 +1,13 @@
 PLAYERS = {
-    "MaxKusnad": "MaxKusnad-1427",
-    "Cangzter": "Cangzter-1459",
-    "SW1039": "sw1039-1426",
-    "Marcel": "Marcel-1694",
     "AquaZephyron": "AquaZephyron-1818",
     "Bentobox": "bentobox-11644",
-    "Sanctumsacre": "Sanctumsacre-1927",
+    "Cangzter": "Cangzter-1459",
     "Jerapah": "Jerapah-1484",
+    "Marcel": "Marcel-1694",
+    "MaxKusnad": "MaxKusnad-1427",
+    "Sanctumsacre": "Sanctumsacre-1927",
     "Stikman": "StikMan-11838"
+    "SW1039": "sw1039-1426",
 }
 
 HEROES = {
