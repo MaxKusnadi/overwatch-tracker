@@ -1,3 +1,5 @@
+import collections
+
 PLAYERS = {
     "AquaZephyron": "AquaZephyron-1818",
     "Bentobox": "bentobox-11644",
@@ -44,3 +46,6 @@ HEROES = {
     "Symmetra": "symmetra",
     "Sombra": "sombra"
 }
+
+PLAYERS = collections.OrderedDict(sorted(PLAYERS.items()))
+HEROES = collections.OrderedDict(sorted(HEROES.items()))
