@@ -14,7 +14,9 @@ PLAYERS = {
     "Bebekterbang": "bebekterbang-1271",
     "Dinarys": "Dinarys-11713",
     "WalkingLemon": "WalkingLemon-1490",
-    "Vortex": "Vortex-1240"
+    "Vortex": "Vortex-1240",
+    "Miro": "Miro-31858",
+    "Rubikon": "Rubikon"
 }
 
 HEROES = {
