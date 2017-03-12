@@ -6,8 +6,8 @@ PLAYERS = {
     "Marcel": "Marcel-1694",
     "MaxKusnad": "MaxKusnad-1427",
     "Sanctumsacre": "Sanctumsacre-1927",
-    "Stikman": "StikMan-11838"
-    "SW1039": "sw1039-1426",
+    "Stikman": "StikMan-11838",
+    "SW1039": "sw1039-1426"
 }
 
 HEROES = {
