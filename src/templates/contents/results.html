@@ -1,5 +1,6 @@
-{% if results %}
+{% if results  %}
   <h3 class='text-center'> {{ hero }}</h3>
+  <h4 class='text-center'>Quick Play</h4>
   <table class='table table-condensed table-striped col-xs-12 sortable'>
   <thead>
     <th>Name</th>
@@ -15,6 +16,30 @@
         {% for key in keys %}
           {% if key != 'player' %}
             <td>{{ result[key] }}</td>
+          {% endif %}
+        {% endfor %}    
+      </tr>
+  {% endfor %}
+  </table>
+{% endif %}
+{% if comp_results %}
+  <hr>
+  <h4 class='text-center'>Competitive Play</h4>
+  <table class='table table-condensed table-striped col-xs-12 sortable'>
+  <thead>
+    <th>Name</th>
+    {% for comp_key in comp_keys %}
+      {% if comp_key != 'player' %}
+        <th>{{ comp_key }}</th>
+      {% endif %}
+    {% endfor %}
+  </thead>
+  {% for comp_result in comp_results %}
+      <tr>
+        <td>{{ comp_result['player'] }}</td>
+        {% for comp_key in comp_keys %}
+          {% if comp_key != 'player' %}
+            <td>{{ comp_result[comp_key] }}</td>
           {% endif %}
         {% endfor %}    
       </tr>

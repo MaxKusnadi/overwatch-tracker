@@ -9,13 +9,14 @@ class Logic(object):
     def __init__(self):
         self.parser = StatsScrapper()
 
-    def get_results(self, hero):
+    def get_results(self, hero, mode="quick"):
         results = []
         for key, value in PLAYERS.items():
             logging.info("LOGIC: Getting value for {}".format(value))
-            result = self.parser.get_stats(value, hero)
+            result = self.parser.get_stats(value, hero, mode)
+            logging.info("Result from logic:")
+            logging.info(result)
             if result:
                 result['player'] = key
                 results.append(result)
-
         return results
