@@ -12,8 +12,9 @@ PLAYERS = {
     "TitaniumBro": "titaniumBro-1595",
     "Blindtrek": "BlindTrek-1514",
     "Bebekterbang": "bebekterbang-1271",
-    "Dinarys": "Dinarys-11713"
-    "WalkingLemon": "WalkingLemon-1490"
+    "Dinarys": "Dinarys-11713",
+    "WalkingLemon": "WalkingLemon-1490",
+    "Vortex": "Vortex-1240"
 }
 
 HEROES = {
