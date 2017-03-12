@@ -1,18 +1,23 @@
-<h3 class='text-center'> {{ hero }}</h3>
 {% if results %}
+  <h3 class='text-center'> {{ hero }}</h3>
+  <table class='table table-condensed table-striped col-xs-12 sortable'>
+  <thead>
+    <th>Name</th>
+    {% for key in keys %}
+      {% if key != 'player' %}
+        <th>{{ key }}</th>
+      {% endif %}
+    {% endfor %}
+  </thead>
   {% for result in results%}
-    <div class='col-md-2 col-xs-12' style='display:inline'>
-      <h4><strong>{{ result.player }}</strong></h4>
-      <table class='table table-condensed table-striped'>
-        {% for key in result.keys() %}
+      <tr>
+        <td>{{ result['player'] }}</td>
+        {% for key in keys %}
           {% if key != 'player' %}
-            <tr>
-              <td>{{ key }}</td>
-              <td>{{ result[key] }}</td>
-            </tr>
+            <td>{{ result[key] }}</td>
           {% endif %}
-        {% endfor %}
-      </table>      
-    </div>
+        {% endfor %}    
+      </tr>
   {% endfor %}
+  </table> 
 {% endif %}
