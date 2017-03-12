@@ -14,7 +14,8 @@ class Logic(object):
         for key, value in PLAYERS.items():
             logging.info("LOGIC: Getting value for {}".format(value))
             result = self.parser.get_stats(value, hero)
-            result['player'] = key
-            results.append(result)
+            if result:
+                result['player'] = key
+                results.append(result)
 
         return results

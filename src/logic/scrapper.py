@@ -16,12 +16,16 @@ class StatsScrapper(object):
         resp = urllib.request.urlopen(link)
         soup = BeautifulSoup(resp, 'html.parser')
 
-        stats = self._parse_stats(soup)
+        stats = self._parse_stats(soup, hero)
         return stats
 
-    def _parse_stats(self, soup):
-        divs = soup.find('div', {'class': 'player-hero'})
+    def _parse_stats(self, soup, hero):
+        _class = 'player-hero theme-hero theme-hero-' + hero
+        divs = soup.find(
+            'div', {'class': _class})
         dic = {}
+        if not divs:
+            return dic
         for div in divs:
             for x in div.children:
                 for y in x.children:
