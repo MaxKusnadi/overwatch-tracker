@@ -16,5 +16,5 @@ def index():
     if form.validate_on_submit():
         hero = request.form['hero']
         results = logic.get_results(hero)
-        return render_template('index.html', form=form, results=results, hero=hero)
+        return render_template('index.html', form=form, results=results, hero=hero.upper())
     return render_template('index.html', form=form, results=None, hero=None)
