@@ -1,0 +1,18 @@
+<h3 class='text-center'> {{ hero.upper() }}</h3>
+{% if results %}
+  {% for result in results%}
+    <div class='col-md-3 col-xs-12' style='display:inline'>
+      <h4><strong>{{ result.player }}</strong></h4>
+      <table class='table table-condensed table-striped'>
+        {% for key in result.keys() %}
+          {% if key != 'player' %}
+            <tr>
+              <td>{{ key }}</td>
+              <td>{{ result[key] }}</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </table>      
+    </div>
+  {% endfor %}
+{% endif %}

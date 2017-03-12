@@ -1,4 +1,6 @@
 import urllib.request
+import logging
+
 from bs4 import BeautifulSoup
 
 
@@ -8,11 +10,13 @@ class StatsScrapper(object):
         self.link = "https://www.overbuff.com/players/pc/{tag}/heroes/{hero}"
 
     def get_stats(self, tag, hero):
+        logging.info("Getting information of {} for {}".format(hero, tag))
         link = self.link.format(tag=tag, hero=hero)
+        logging.info("Link: {}".format(link))
         resp = urllib.request.urlopen(link)
         soup = BeautifulSoup(resp, 'html.parser')
 
-        stats = self.parse_stats(soup)
+        stats = self._parse_stats(soup)
         return stats
 
     def _parse_stats(self, soup):
@@ -33,13 +37,7 @@ class StatsScrapper(object):
 
                         else:
                             dic[label.text] = value.text
-                    except:
+                    except Exception as err:
                         pass
-        name_div = divs.find('div', {'class': 'name'})
-        dic['name'] = name_div.a.text
-        return dic
 
-if __name__ == '__main__':
-    s = StatsScrapper()
-    r = s.get_stats("MaxKusnad-1427", "soldier76")
-    print(r)
+        return dic
