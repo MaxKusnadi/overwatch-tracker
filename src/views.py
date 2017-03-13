@@ -17,10 +17,8 @@ def index():
         hero = request.form['hero']
         results = logic.get_results(hero)
         comp_results = logic.get_results(hero, "comp")
-        if results:
-            keys = results[0].keys()
-        if comp_results:
-            comp_keys = comp_results[0].keys()
+        keys = results[0].keys() if results else None
+        comp_keys = comp_results[0].keys() if comp_results else None
         logging.info("View:")
         logging.info(comp_results)
         logging.info("Finish scrapping..")

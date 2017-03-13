@@ -1,4 +1,4 @@
-from FlaskForm import Form
+from flask_wtf import Form
 from wtforms import SelectField
 from wtforms.validators import DataRequired
 from src.constants import HEROES
