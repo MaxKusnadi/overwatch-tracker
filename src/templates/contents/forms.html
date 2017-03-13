@@ -1,4 +1,6 @@
 <div class='col-xs-12 text-center' style='display: inline-block; margin-bottom:30px'>
+  <input type="button" value="What time is it?"  onclick="play()" class='btn btn-danger'>
+  <audio id="audio" src="{{ url_for('static', filename='sounds/mccree.m4r')}}" ></audio>
   <form action="" method="post" name="login">
     {{ form.hidden_tag() }}
     

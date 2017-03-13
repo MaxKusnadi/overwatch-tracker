@@ -12,6 +12,12 @@
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='{{ url_for("static", filename="sorttable.js") }}'></script>
+  <script>
+    function play(){
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
+  </script>
 </head>
 <body>
   {% include 'layouts/header.html' %}
