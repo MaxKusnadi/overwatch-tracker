@@ -48,7 +48,7 @@ class StatsScrapper(object):
 
                         else:
                             dic[label.text] = value.text
-                    except Exception as err:
+                    except Exception:
                         pass
 
         return dic
